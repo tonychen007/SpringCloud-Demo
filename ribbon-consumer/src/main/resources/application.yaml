@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ribbonConsumer
+
+server:
+  port: 9000
+
+eureka:
+  port: 10086
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka

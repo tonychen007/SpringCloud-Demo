@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: testController
+
+server:
+  eureka:
+    port1: 10086
+    port2: 10087
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.eureka.port1}/eureka, http://${eureka.instance.hostname}:${server.eureka.port2}/eureka

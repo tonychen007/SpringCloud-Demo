@@ -43,6 +43,7 @@ public class TestController {
         assert (instance != null);
         logger.info("/hello, host:" + instance.getHost() + ", port:" + instance.getPort() + ", service id:" + instance.getServiceId());
 
-        return "hello";
+        String name = req.getParameter("name");
+        return name + "hello";
     }
 }

@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 @Service
-public class ConsumerSerivce {
+public class RibbonSerivce {
 
     private final static String TEST_SERVICE = "testService";
 

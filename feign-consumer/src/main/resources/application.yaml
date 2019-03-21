@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: feignConsumer
+
+server:
+  port: 9001
+
+eureka:
+  port: 10086
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${eureka.port}/eureka

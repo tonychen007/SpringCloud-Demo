@@ -16,4 +16,9 @@ public class ConsumerController {
     public String helloConsumer(@RequestParam(value = "name", required = true) String username) {
         return consumerSerivce.helloService(username);
     }
+
+    @RequestMapping("/ribbon-command")
+    public String helloConsumerCommand() {
+        return consumerSerivce.helloServiceCommand();
+    }
 }

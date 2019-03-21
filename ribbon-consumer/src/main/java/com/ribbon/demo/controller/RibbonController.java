@@ -13,12 +13,12 @@ public class RibbonController {
     private RibbonSerivce ribbonService;
 
     @RequestMapping("/ribbon")
-    public String helloConsumer(@RequestParam(value = "name", required = true) String username) {
-        return ribbonService.helloService(username);
+    public String ribbonConsumer(@RequestParam(value = "name", required = true) String username) {
+        return ribbonService.ribbonService(username);
     }
 
     @RequestMapping("/ribbon-command")
-    public String helloConsumerCommand() {
-        return ribbonService.helloServiceCommand();
+    public String ribbonConsumerCommand() {
+        return ribbonService.ribbonServiceCommand();
     }
 }

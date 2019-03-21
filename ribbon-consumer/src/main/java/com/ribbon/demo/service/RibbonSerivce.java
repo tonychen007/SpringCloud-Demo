@@ -21,19 +21,19 @@ public class RibbonSerivce {
     @LoadBalanced
     private RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "helloServiceFallback",
+    @HystrixCommand(fallbackMethod = "ribbonServiceFallback",
             commandProperties = @HystrixProperty(
                     name = "execution.isolation.thread.timeoutInMilliseconds", value = "3000"))
-    public String helloService(String name) {
+    public String ribbonService(String name) {
         String ret = restTemplate.getForEntity("http://" + TEST_SERVICE + "/hello?name={1}", String.class, name).getBody();
         return ret;
     }
 
-    public String helloServiceFallback(String name) {
+    public String ribbonerviceFallback(String name) {
         return "helloServiceFallback";
     }
 
-    public String helloServiceCommand() {
+    public String ribbonServiceCommand() {
         String name = "tony-command";
         StringCommand command = new StringCommand(
                 com.netflix.hystrix.HystrixCommand.Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("")),

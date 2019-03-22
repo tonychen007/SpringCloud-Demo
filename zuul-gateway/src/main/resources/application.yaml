@@ -1,9 +1,18 @@
 spring:
   application:
-    name: feign-Consumer
+    name: zuul-gateway
 
 server:
-  port: 9001
+  port: 5555
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: test-Service
+    api-b:
+      path: /api-b/**
+      serviceId: feign-Consumer
 
 eureka:
   port: 10086

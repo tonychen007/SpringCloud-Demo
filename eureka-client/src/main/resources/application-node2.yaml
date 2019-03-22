@@ -1,6 +1,6 @@
 spring:
   application:
-    name: testService
+    name: test-Service
 
 server:
   eureka:

@@ -15,7 +15,7 @@ import java.util.concurrent.Future;
 @Service
 public class RibbonSerivce {
 
-    private final static String TEST_SERVICE = "testService";
+    private final static String TEST_SERVICE = "test-Service";
 
     @Autowired
     @LoadBalanced

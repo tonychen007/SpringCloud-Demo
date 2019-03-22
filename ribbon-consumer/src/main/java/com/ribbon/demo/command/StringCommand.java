@@ -5,7 +5,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class StringCommand extends HystrixCommand<String> {
 
-    private final static String TEST_SERVICE = "testService";
+    private final static String TEST_SERVICE = "test-Service";
 
     private RestTemplate restTemplate;
     private String name;

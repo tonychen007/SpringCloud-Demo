@@ -3,13 +3,12 @@
 # by Tony Chen
 
 HOME=`pwd`/..
-EUREKA_SERVER=$HOME/eureka-server/target
-
-EUREKA_SERVER_JAR=`find $EUREKA_SERVER -name *.jar`
-echo ${EUREKA_SERVER_JAR##*/}
-
 cd $HOME
 mvn clean package
+
+EUREKA_SERVER=$HOME/eureka-server/target
+EUREKA_SERVER_JAR=`find $EUREKA_SERVER -name *.jar`
+echo ${EUREKA_SERVER_JAR##*/}
 
 rm pid.file
 touch pid.file
